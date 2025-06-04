@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: hotel-management-service
+  config:
+    import: configserver:http://localhost:8888
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/HotelManagement
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
